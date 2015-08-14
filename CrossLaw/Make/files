@@ -1,0 +1,3 @@
+CrossLaw.C
+
+LIB = $(FOAM_USER_LIBBIN)/libCrossLaw
