@@ -215,8 +215,13 @@ functions
     { 
         functionObjectLibs ("libutilityFunctionObjects.so"); 
         type coded; 
-        redirectType strRate; // arbitral name
-        outputControl outputTime; 
+        redirectType strRate; // arbitrary name
+
+        //outputControl outputTime;    // for Info
+
+        outputControl   timeStep;   // for Info
+        outputInterval  1;          // strRate avg will be written every time step
+
         code 
         #{ 
             const volVectorField& U = mesh().lookupObject<volVectorField>("U");
